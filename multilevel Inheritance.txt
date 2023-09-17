@@ -1,0 +1,88 @@
+package javadeveloper.day3;
+
+public class Country {
+    public String countryName;
+
+    public Country(String countryName) {
+        this.countryName = countryName;
+        System.out.println("A Country is" + " " + countryName);
+
+    }
+
+    public Country() {
+        System.out.println("I am country!");
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+}
+class State extends Country{
+    public String stateName;
+
+    public State(String countryName) {
+
+    }
+
+    public State(String countryName, String stateName) {
+        super(countryName);
+        this.stateName = stateName;
+        System.out.println("A State is" +" " + stateName);
+    }
+
+    public State() {
+        System.out.println("I am State!");
+    }
+
+    public String getStateName() {
+        return stateName;
+    }
+
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
+    }
+}
+
+package javadeveloper.day3;
+
+public class City extends State {
+    public String cityName;
+
+    public City(String countryName, String stateName, String cityName) {
+        super(countryName, stateName);
+        this.cityName = cityName;
+        System.out.println("A City is" +" " + cityName);
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
+
+    public City() {
+
+        System.out.println("I am city!");
+    }
+
+
+
+    public City(String countryName) {
+        super(countryName);
+    }
+
+    public static void main(String[] args) {
+
+        City obj2 = new City("India","Maharashtra","Akola");
+
+        System.out.println(obj2);
+
+
+    }
+}
