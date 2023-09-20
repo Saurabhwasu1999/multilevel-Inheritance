@@ -1,0 +1,33 @@
+package javadeveloper.day4;
+
+public class Animals {
+//    public String Eating;
+
+    public Animals() {
+        System.out.println("We are Animals");
+    }
+}
+class Cat extends Animals{
+//    public String Drinking;
+
+    public Cat() {
+        System.out.println("Hello I am Cat!");
+    }
+}
+class Dog extends Animals{
+    public Dog() {
+        System.out.println("Hello I am Dog!");
+    }
+}
+class Tiger extends Animals{
+    public static void main(String[] args) {
+        Tiger obj = new Tiger();
+        System.out.println(obj);
+        System.out.println("Hello I am Tiger!");
+        Dog obj1 = new Dog();
+        System.out.println(obj1);
+        Cat obj2 = new Cat();
+        System.out.println(obj2);
+        System.out.println(obj2);
+    }
+}
